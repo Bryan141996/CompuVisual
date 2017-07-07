@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author bryan
  */
-public class AddClientes extends javax.swing.JFrame {
+public class Clientes extends javax.swing.JFrame {
 
     conectar cc = new conectar();
     Connection cn = cc.conexion();
@@ -22,7 +22,7 @@ public class AddClientes extends javax.swing.JFrame {
     /**
      * Creates new form Clientes
      */
-    public AddClientes() {
+    public Clientes() {
         initComponents();
     }
 
@@ -65,7 +65,7 @@ public class AddClientes extends javax.swing.JFrame {
 
     public void ControlIngresoDatos() {
         if (!txtCedula.getText().equals("") && !txtNombre.getText().equals("") && !txtApellido.getText().equals("") && !txtDireccion.getText().equals("") && !txtTelefono.getText().equals("") && !txtCelular.getText().equals("")) {
-            if (txtCedula.getText().length() == 10 && txtTelefono.getText().length() == 9 && txtCelular.getText().length() == 10) {
+            if (txtCedula.getText().length() == 10 && txtTelefono.getText().length() == 10 && txtCelular.getText().length() == 10) {
                 InsertarMarcas();
             } else {
                 if (txtCedula.getText().length() != 10) {
@@ -354,28 +354,27 @@ public class AddClientes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddClientes.class
+            java.util.logging.Logger.getLogger(Clientes.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddClientes.class
+            java.util.logging.Logger.getLogger(Clientes.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddClientes.class
+            java.util.logging.Logger.getLogger(Clientes.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddClientes.class
+            java.util.logging.Logger.getLogger(Clientes.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddClientes().setVisible(true);
+                new Clientes().setVisible(true);
             }
         });
     }
